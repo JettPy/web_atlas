@@ -1,17 +1,15 @@
-<!DOCTYPE html>
-<html lang="ru">
-<head>
-    <meta charset="UTF-8">
-    <title>{{text}}</title>
-</head>
-<body>
-    <h1>ПИСЯ</h1>
-    <h1>{{ text }}</h1>
+{% extends 'base.html' %}
+
+{% block title %}
+главная
+{% endblock %}
+
+{% block content %}
+<h1>{{ text }}</h1>
     <ul>
         {% for item in menu %}
         <li>{{ item }}</li>
         {% endfor %}
     </ul>
-        <h1>{{ text }}</h1>
-</body>
-</html>
+{% endblock %}
+

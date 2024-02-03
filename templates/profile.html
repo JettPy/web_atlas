@@ -1,0 +1,13 @@
+{% extends 'base.html'  %}
+
+{% block title %}
+профиль
+{% endblock %}
+
+{% block content %}
+{% if user %}
+<p>{{user}}</p>
+{% else %}
+<p>Вы не авторизованы</p>
+{% endif %}
+{% endblock %}

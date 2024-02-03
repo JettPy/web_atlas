@@ -4,7 +4,7 @@ app = flask.Flask(__name__)
 
 @app.route("/")
 def index():
-    return flask.render_template("index.html", text="araaaaaaa",menu = ["fjffjfj", "slawa loxx"])
+    return flask.render_template("imkmkndex.html", text="araaaaaaa",menu = ["fjffjfj", "slawa loxx"])
 
 
 if __name__ == "__main__":

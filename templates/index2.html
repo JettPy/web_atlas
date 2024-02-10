@@ -1,0 +1,17 @@
+<!-- командой extends мы указываем что будем расширять шаблон base.html -->
+{% extends 'base.html' %}
+
+<!-- тут добавим содержимое title -->
+{% block title %}
+Главная
+{% endblock %}
+
+<!-- тут добавим содержимое content -->
+{% block content %}
+<h1>{{ text }}</h1>
+    <ul>
+        {% for item in menu %}
+        <li>{{ item }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}

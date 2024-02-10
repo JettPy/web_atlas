@@ -1,0 +1,9 @@
+/* Это файл со стилями */
+
+body {
+    background-color: rgba(129, 243, 239, 0.67);
+}
+
+a {
+    color: crimson;
+}

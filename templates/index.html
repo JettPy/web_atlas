@@ -1,15 +1,23 @@
+<!-- командой extends мы указываем что будем расширять шаблон base.html -->
 {% extends 'base.html' %}
 
+<!-- тут добавим содержимое title -->
 {% block title %}
-главная
+Главная
 {% endblock %}
 
+<!-- тут добавим содержимое content -->
 {% block content %}
-<h1>{{ text }}</h1>
-    <ul>
-        {% for item in menu %}
-        <li>{{ item }}</li>
-        {% endfor %}
-    </ul>
+<main>
+    <a href="{{ url_for('blog') }}">Блог</a>
+    <section class="one">
+        <h1>Это первая секция</h1>
+    </section>
+    <section class="two">
+        <h1>Это вторая секция</h1>
+    </section>
+    <section class="three">
+        <h1>Это третья секция</h1>
+    </section>
+</main>
 {% endblock %}
-

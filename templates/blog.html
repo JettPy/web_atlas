@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Блог
+{% endblock %}
+
+{% block content %}
+<!--Это тег шапки сайта-->
+<header>
+    <h1 class="blog-title">Мой блог</h1>
+</header>
+<main>
+<!--  Тут мы опишем форму - то что получает данные от пользователя и отправляет их на сервер  -->
+<!--  В method указываем post для отправки на сервер, а в action роут на сервере  -->
+    <form method="post" action="/blog">
+<!--   label - это подпись для поля, в атрибуте for указывается id поля ввода    -->
+        <label for="title">Title:</label>
+<!--   Это текстовое поле с именем поле title. required - означает что поле обязательно   -->
+        <input type="text" id="title" name="title" required><br>
+        <label for="content">Content:</label>
+<!--   textarea - Это тег для ввода большого объема текста     -->
+        <textarea id="content" name="content" required></textarea><br>
+<!--   input c type="submit" это кнопка по нажатию на которую отправляется запрос     -->
+        <input type="submit" value="Опубликовать">
+    </form>
+     <section class="blog-posts">
+         {% for post in posts %}
+     <div>
+         <h2>{{ post.title }}</h2>
+         <p>{{ post.content }}</p>
+         <p>Created on {{ post.date }}</p>
+     </div>
+     {% endfor %}
+     </section>
+</main>
+<footer>
+
+</footer>
+{% endblock %}

@@ -1,16 +1,17 @@
+<!-- Это шаблон страницы, все остальные будут наследоваться от нее  -->
 <!DOCTYPE html>
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>{% block title %}{% endblock %}</title>
+<!--    Здесь мы подключаем файл со стилями index.css. Он лежит в папке static.-->
+<!--    Путь до файла определяется динамически благодаря функции url_for -->
     <link type="text/css" href="{{ url_for('static', filename='index.css') }}" rel="stylesheet" />
+<!-- элемент block отвечает за секцию для кода наследника -->
+<!-- например у нас будет блок title и content -->
+    <title>{% block title %}{% endblock %}</title>
 </head>
 <body>
-    <header>
-        {% include "navigation.html" %}
-    </header>
-    {% block content %}
-    {% endblock %}
-
+{% block content %}
+{% endblock %}
 </body>
 </html>

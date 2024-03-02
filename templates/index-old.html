@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}
+главная
+{% endblock %}
+
+{% block content %}
+<h1>{{ text }}</h1>
+    <ul>
+        {% for item in menu %}
+        <li>{{ item }}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
+
